@@ -27,3 +27,8 @@ it('should call remove comment function', () => {
   wrapper.instance().removeComment();
   expect(api.removeComment).toHaveBeenCalled();
 })
+
+it('should match snapshot', () => {
+  const wrapper = mount(<Comments postId="1" currentPersona="Zac" />)
+  expect(wrapper).toMatchSnapshot();
+})

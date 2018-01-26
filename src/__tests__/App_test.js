@@ -7,7 +7,7 @@ test('renders the app', () => {
   render(<App />);
 });
 
-it('should display current persona', () => {
+it('should set state with current persona', () => {
   const wrapper = shallow(<App />);
   const person = 'Steffe';
   wrapper.setState({ 'currentPersona': person});
