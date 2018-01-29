@@ -7,7 +7,7 @@ describe('create new comment', () => {
 
   it('should create a new comment', () => {
     newComment.find('textarea[name="comment"]').simulate('change', { target: { name: 'comment', value: 'Zacs complimenting comment' } });
-    expect(newComment.state().comment).toContain('Zacs complimenting comment');
+    expect(newComment.state().comment).toBe('Zacs complimenting comment');
 
   });
 
@@ -16,7 +16,6 @@ describe('create new comment', () => {
     expect(newComment.state().comment).toContain('Zacs nasty comment');
     newComment.find('form').simulate('submit');
     const storedComment = JSON.parse(localStorage.getItem('comments'))[0].comment;
-    console.log(storedComment);
-    expect(storedComment).toContain('Zacs nasty comment');
+    expect(storedComment).toBe('Zacs nasty comment');
   })
 });

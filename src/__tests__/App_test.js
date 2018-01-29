@@ -24,20 +24,15 @@ it('should get current persona', () => {
 
 it('should be able to change page from home to bot', () => {
   const wrapper = mount(<App />);
-  const { currentPage: homePage } = wrapper.state();
-  expect(homePage).toBe("home");
+  wrapper.setState({ currentPage: "home" });
   wrapper.instance().changePage();
-  const { currentPage } = wrapper.state();
-  expect(currentPage).toBe("bot");
+  expect(wrapper.state('currentPage')).toBe("bot");
 });
 
-it.skip('should be able to change page from bot to home', () => {
+it('should be able to change page from bot to home', () => {
   const wrapper = mount(<App />);
-  const { currentPage } = wrapper.state();
-  expect(currentPage).toBe("home");
+  wrapper.setState({ currentPage: "bot" });
   wrapper.instance().changePage();
-  expect(currentPage).toBe("bot");
-  wrapper.instance().changePage();
-  const { currentPage: homePage } = wrapper.state();
-  expect(homePage).toBe("home");
+  expect(wrapper.state('currentPage')).toBe("home");
 });
+
