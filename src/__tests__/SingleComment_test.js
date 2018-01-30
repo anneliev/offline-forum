@@ -10,8 +10,7 @@ describe('single comment tests', () => {
       postId: 1,
       author: "Zac",
       date: "2018-01-29",
-      currentPersona: "Zac",
-      
+      currentPersona: "Zac", 
     };
 
   it('should show a single comment', () => {
@@ -34,4 +33,3 @@ describe('single comment tests', () => {
   })
 
 });
-

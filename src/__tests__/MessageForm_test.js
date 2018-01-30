@@ -15,7 +15,6 @@ describe('create new message', () => {
     expect(newText.state().userMessage).toBe('Zacs message');
     newText.find('form').simulate('submit');
     expect(newText.state().userMessage).toBe('');
-
   });
 
 });

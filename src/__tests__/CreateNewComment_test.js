@@ -8,7 +8,6 @@ describe('create new comment', () => {
   it('should create a new comment', () => {
     newComment.find('textarea[name="comment"]').simulate('change', { target: { name: 'comment', value: 'Zacs complimenting comment' } });
     expect(newComment.state().comment).toBe('Zacs complimenting comment');
-
   });
 
   it('should store comment to localStorage', () => {

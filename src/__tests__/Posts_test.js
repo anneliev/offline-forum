@@ -57,5 +57,4 @@ describe('can set post in localStorage', () => {
 it('should match snapshot', () => {
   const wrapper = mount(<Posts currentPersona="Steffe" /> );
   expect(wrapper.html()).toMatchSnapshot();
-})
-
+});
