@@ -4,6 +4,7 @@ import { shallow } from 'enzyme';
 import AvatarSelector from '../components/AvatarSelector';
 
 describe('image should match avatar', () => {
+
   it('should display the correct avatar, zac', () => {
     const avatar = shallow(<AvatarSelector currentPersona="Zac" />);
     expect(avatar.find("img").prop("src")).toBe("zac.png");
@@ -18,6 +19,7 @@ describe('image should match avatar', () => {
     const avatar = shallow(<AvatarSelector currentPersona="Morgana" />);
     expect(avatar.find("img").prop("src")).toBe("morgana.png");
   });
+  
 })
 
 

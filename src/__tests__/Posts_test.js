@@ -3,7 +3,7 @@ import { shallow, mount } from 'enzyme';
 import Posts from '../components/Posts';
 import * as api from '../api';
 
-describe('can show and remove comment', () =>{
+describe('can show and remove post', () =>{
   const posts = [
     {
       id: "1",
